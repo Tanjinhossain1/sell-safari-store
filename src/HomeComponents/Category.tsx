@@ -7,6 +7,10 @@ import MonitorIcon from '@mui/icons-material/Monitor';
 import LivingIcon from '@mui/icons-material/Living';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShirt,faCat,faUserGraduate,faWheatAwn, faPersonDress,faFutbol,faIndustry,faBasketShopping,faGlobe } from '@fortawesome/free-solid-svg-icons';  
+import DesignServicesOutlinedIcon from '@mui/icons-material/DesignServicesOutlined';
+import WorkOutlinedIcon from '@mui/icons-material/WorkOutlined'; 
 
 const categories = [
   { title: "Mobile", icon: <PhoneIphoneIcon sx={{color:"#59bcd1",fontSize: 35}}  />, totalAds: 1500 },
@@ -14,8 +18,21 @@ const categories = [
   { title: "Vehicles", icon: <DirectionsCarFilledIcon sx={{color:"#009f7f",fontSize: 35}} />, totalAds: 1000 },
   { title: "Home and Living", icon: <LivingIcon sx={{color:"#006750",fontSize: 35}}  />, totalAds: 1500 },
   { title: "Property", icon: <MapsHomeWorkIcon sx={{color:"#f05a4e",fontSize: 35}}  />, totalAds: 1500 },
-  // Add more categories here...
-];
+  { title: "Boys' Fashion and Grooming", icon: <FontAwesomeIcon style={{color:"#4998e4",fontSize: 30}}  icon={faShirt} />, totalAds: 1500 },
+  { title: "Pets and animals", icon: <FontAwesomeIcon style={{color:"#bc9e68",fontSize: 35}}  icon={faCat} />, totalAds: 1500 },
+  { title: "Girls fashion and", icon: <FontAwesomeIcon style={{color:"#f05a4e",fontSize: 45}}  icon={faPersonDress} />, totalAds: 1500 },
+  { title: "Hobbies, sports and children", icon: <FontAwesomeIcon icon={faFutbol} style={{color:"#7f727b",fontSize: 35}} />, totalAds: 1500 },
+  { title: "Business and Industry", icon: <FontAwesomeIcon icon={faIndustry} style={{color:"#ecb661",fontSize: 35}} />, totalAds: 1500 },
+  { title: "Daily essentials", icon: <FontAwesomeIcon icon={faBasketShopping} style={{color:"#76abc6",fontSize: 35}} />, totalAds: 1500 },
+  { title: "education", icon: <FontAwesomeIcon icon={faUserGraduate} style={{color:"#2e4a74",fontSize: 35}} />, totalAds: 1500 },
+  { title: "agricultural products", icon: <FontAwesomeIcon icon={faWheatAwn} style={{color:"#b19662",fontSize: 35}} />, totalAds: 1500 },
+  { title: "service", icon: <DesignServicesOutlinedIcon sx={{color:"#979391",fontSize: 35}} />, totalAds: 1500 },
+  { title: "job", icon: <WorkOutlinedIcon sx={{color:"#074f7a",fontSize: 35}} />, totalAds: 1500 },
+  { title: "Job abroad", icon: <FontAwesomeIcon icon={faGlobe} style={{color:"#2e4a74",fontSize: 35}} />, totalAds: 1500 },
+  
+]; 
+ 
+
 
 const Category = () => {
     const theme = useTheme();
@@ -53,19 +70,21 @@ const Category = () => {
       </Grid>
       
       {categories.map((category, index) => (
-        <Grid   key={index} item xs={6} md={4} lg={3}>
+        <Grid  key={index} item xs={12} md={4} lg={3}>
           <div
             style={{
-              textAlign: "center",
+              textAlign: "left",
               display: "flex",
-              justifyContent: "center",
-              alignItems:"center"
+              justifyContent: "start",
+              alignItems:"center",
+              marginBottom: '40px',
+              cursor:"pointer"
             }}
           >
             {/* Display category icon */}
             {category.icon}
 
-            <div style={{marginLeft:"10px"}}>
+            <div style={{marginLeft:"10px", textAlign:'left'}}>
               {/* Display category title */}
               <Typography sx={{fontSize:16}} variant="body2">{category.title}</Typography>
 
