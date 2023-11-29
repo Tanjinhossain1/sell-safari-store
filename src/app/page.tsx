@@ -6,6 +6,7 @@ import Category from '@/HomeComponents/Category'
 import JobCart from '@/HomeComponents/JobCart'
 import QuickLinks from '@/HomeComponents/QuickLinks'
 import HomeAbout from '@/HomeComponents/HomeAbout'
+import Footer from '@/components/Sharable/Footer'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <JobCart />
       <QuickLinks />
       <HomeAbout />
+      <Footer />
     </div>
   )
 }
