@@ -9,7 +9,7 @@ const Footer = () => {
   
   return (
     <footer  style={{  padding: '20px 0' }}> 
-        <hr style={{border: '1px solid #149777',height:'2px'}} />
+        <hr style={{border: '1px solid #149777',height:'1px'}} />
       <Container sx={{ width: isSm ? "100%":"70%", m: "auto" }}>
         <Grid sx={{mb:5}} container spacing={3}>
           {/* Column 1 */}

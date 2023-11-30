@@ -16,7 +16,8 @@ import Button from "@mui/material/Button";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import TextField from '@mui/material/TextField'; 
 import SearchIcon from '@mui/icons-material/Search'; 
- 
+import { Paper } from "@mui/material";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 interface Props {
   /**
@@ -33,7 +34,7 @@ const navItems = [
   { name: "Products", link: "/products" },
   { name: "Contact", link: "/contact" },
   { name: "Chat", link: "/chat" },
-  { name: "Login", link: "/login" },
+  { name: "Login", link: "/login",special: true },
 ];
 
 export default function Navbar(props: Props) {
@@ -69,6 +70,7 @@ export default function Navbar(props: Props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
+      position="static"
         sx={{
           background: "linear-gradient(100deg, #f5642d 50%, #f48623 100%)",
           boxShadow: "none",
@@ -135,7 +137,7 @@ export default function Navbar(props: Props) {
                 boxShadow: "0px 4px 10px #c72e00",
               }}
             />
-            <p style={{margin:0,padding:0,display:'inline',marginLeft:'10px',textAlign:'center',fontWeight:600,fontSize:18}}>Sell <br/> Safari</p>
+            <p style={{margin:0,padding:0,display:'inline',marginLeft:'10px',textAlign:'center',fontWeight:600,fontSize:18}}>Sell Safari</p>
           </Typography>
           
           <Typography
@@ -226,7 +228,7 @@ export default function Navbar(props: Props) {
             }}
           >
             {navItems.map((item) => (
-              <Button key={item.name} sx={{ color: "#fff" }}>
+              <Button variant={item.special ? 'contained' : 'text'}  key={item.name} sx={{ color: "#fff", bgcolor: item.special ? "#ffa200":'', ":hover": item.special ? {backgroundColor:"#ffa200"}:"" }}>
                 {item.name}
               </Button>
             ))}
@@ -253,42 +255,7 @@ export default function Navbar(props: Props) {
           {drawer}
         </Drawer>
       </nav>
-      <Box
-        component="main"
-        sx={{
-          p: 3,
-          background: "linear-gradient(100deg, #f5642d 50%, #f48623 100%)",
-          boxShadow: "none",
-          border: 0,
-          width:'100%',
-        }}
-      >
-        <Toolbar />
-        <Typography
-       sx={{
-        position: 'relative',
-        color: '#fff', // Text color
-        textAlign: 'center',
-        lineHeight: '1.5',
-        padding: '40px', // Adjust padding as needed
-        backgroundImage: 'url(/main-home.png)', // Reference the image in the public directory
-        backgroundSize: 'contain',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        borderRadius: '10px', // Rounded corners for the background
-        width:'100%',
-        height:'60vh'
-      }}>
-         <div className="search-container">
-  <input type="text" className="input-for-search" placeholder="Search for items" />
-  <button className="search-button">
-    <SearchIcon sx={{ fontSize: 30 }} />
-  </button>
-</div>
-
-
-        </Typography>
-      </Box>
+      
     </Box>
   );
 }

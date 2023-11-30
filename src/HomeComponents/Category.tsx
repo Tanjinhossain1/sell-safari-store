@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Slider, useMediaQuery, useTheme } from '@mui/material';
+import { Grid, Typography, Slider, useMediaQuery, useTheme, Paper } from '@mui/material';
 import DirectionsCarFilledIcon from "@mui/icons-material/DirectionsCarFilled";
 import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
@@ -68,10 +68,11 @@ const Category = () => {
       <Grid item xs={12}>
         <Typography variant="h6">Browse by Category</Typography>
       </Grid>
-      
+      <Paper sx={{p:3}} elevation={2}>
+      <Grid container>
       {categories.map((category, index) => (
         <Grid  key={index} item xs={12} md={4} lg={3}>
-          <div
+         <div
             style={{
               textAlign: "left",
               display: "flex",
@@ -94,7 +95,9 @@ const Category = () => {
           </div>
         </Grid>
       ))}
-    </Grid>
+      </Grid>
+      </Paper>
+      </Grid>
   );
 };
 

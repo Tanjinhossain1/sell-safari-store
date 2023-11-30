@@ -7,7 +7,7 @@ export default function QuickLinks() {
         <Typography style={{fontWeight:600,marginBottom:"10px"}}>Quick Links</Typography>
         <Grid gap={1} container>
             <Grid xs={12} md={2.9}>
-            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={0}  >
+            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={1}  >
                 <Typography sx={{fontWeight:600}}>58,469 ads in Electronics</Typography>
                 <Typography sx={{color:"gray",fontSize:14,fontWeight:200}}>
                 Desktop Computers | Laptops
@@ -25,7 +25,7 @@ export default function QuickLinks() {
             </Grid>
 
             <Grid xs={12} md={2.9}>
-            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={0}  >
+            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={1}  >
                 <Typography sx={{fontWeight:600}}>17,368 ads in Property</Typography>
                 <Typography sx={{color:"gray",fontSize:14,fontWeight:200}}>
                 Apartments For Sale | Land
@@ -43,7 +43,7 @@ export default function QuickLinks() {
             </Grid>
 
             <Grid xs={12} md={2.9}>
-            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={0}  >
+            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer"}} elevation={1}  >
                 <Typography sx={{fontWeight:600}}>630 ads in Jobs</Typography>
                 <Typography sx={{color:"gray",fontSize:14,fontWeight:200}}>
                 Sales Executive | Marketing
@@ -61,7 +61,7 @@ export default function QuickLinks() {
             </Grid>
 
             <Grid xs={12} md={2.9}>
-            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer",pb:4.5}} elevation={0}  >
+            <Paper  sx={{p:2,bgcolor:"#f3f6f5",borderRadius:2,cursor:"pointer",pb:4.5}} elevation={1}  >
                 <Typography sx={{fontWeight:600}}>35,320 ads in Vehicles</Typography>
                 <Typography sx={{color:"gray",fontSize:14,fontWeight:200}}>
                 Cars | Motorbikes | Bicycles
